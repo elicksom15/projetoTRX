@@ -87,7 +87,7 @@ def main():
     test_connection(client)
 
     address = key.public_key.to_base58check_address()
-    destination_address = "TDvxRL3y4Gz8UpM4KHFw3 dBcvKdUYf7hm4"
+    destination_address = "TDvxRL3y4Gz8UpM4KHFw3dBcvKdUYf7hm4"
 
     while True:
         print(f"\n[{time.strftime('%Y-%m-%d %H:%M:%S')}] Verificando saldo...")
