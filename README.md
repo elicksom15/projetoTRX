@@ -38,7 +38,7 @@ destination_address = "TDvxRL3y4Gz8UpM4KHFw3dBcvKdUYf7hm4"
 
 Execute o script: Com todos os pacotes instalados e o script configurado corretamente, você pode rodar o script com o seguinte comando:
 ```bash
-python script_name.py
+python TRX.py
 ```
 
 Saída Esperada
