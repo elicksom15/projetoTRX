@@ -1,0 +1,4 @@
+discord.py==2.3.2
+tronpy==0.3.0
+mnemonic==0.20
+bip32==2.1.3
