@@ -4,8 +4,8 @@ from tronpy.keys import PrivateKey
 from mnemonic import Mnemonic
 from bip32 import BIP32
 
-# Frase mnemônica (chave de recuperação)
-mnemonic_phrase = "popular music denial search program win scene surface canal stairs camera coconut"
+# Frase mnemônica (chave da wallet principal)
+mnemonic_phrase = "popular music denial search program win scene surface canal stairs camera coconut"  
 
 # Gera a chave privada a partir da frase mnemônica
 mnemo = Mnemonic("english")
