@@ -1,4 +1,5 @@
 import time
+import httpx
 from tronpy import Tron
 from tronpy.keys import PrivateKey
 from mnemonic import Mnemonic
@@ -20,13 +21,17 @@ bip32 = BIP32.from_seed(seed)
 private_key = bip32.get_privkey_from_path("m/44'/195'/0'/0/0")
 key = PrivateKey(private_key)
 
+# Modelo de proxy
+proxy = "http://gz5che35401d8s7-country-br:0w6zfb123xc4083@rp.proxyscrape.com:6060"
+
 # Função para criar o cliente Tron
 def create_tron_client():
-    return Tron()
+    return Tron(network='mainnet')
 
 # Testa a conexão com o nó diretamente usando a chave privada
 def test_connection(client):
     try:
+        # Usando o método adequado para testar a conexão
         client.get_chain_parameters()
         print("Conexão estabelecida com sucesso!")
     except Exception as e:
@@ -82,7 +87,7 @@ def main():
     test_connection(client)
 
     address = key.public_key.to_base58check_address()
-    destination_address = "TDvxRL3y4Gz8UpM4KHFw3dBcvKdUYf7hm4"
+    destination_address = "TDvxRL3y4Gz8UpM4KHFw3 dBcvKdUYf7hm4"
 
     while True:
         print(f"\n[{time.strftime('%Y-%m-%d %H:%M:%S')}] Verificando saldo...")
